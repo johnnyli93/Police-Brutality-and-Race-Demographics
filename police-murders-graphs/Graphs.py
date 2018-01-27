@@ -203,7 +203,6 @@ barWidth = 0.9
 f,ax = plt.subplots(figsize = (20,15))
 
 
-# Create green Bars
 plt.bar(r, asian_bars, color='#12ECE2', edgecolor='white', width=barWidth, label='Asian')
 plt.bar(r, black_bars, bottom = asian_bars, color= "#1289EC", edgecolor='white', width=barWidth, label='Black')
 plt.bar(r, hispanic_bars, bottom = [i+j for i,j in zip(asian_bars, black_bars)], color= "#121CEC", edgecolor='white', width=barWidth, label='Hispanic')
@@ -215,5 +214,5 @@ plt.xlabel("States", fontsize = 15)
 plt.ylabel("Percentage Murdered", fontsize= 15)
 plt.xticks(range(len(all_states)) ,list(all_states), rotation= 45, fontsize =15)
 plt.legend(loc = "best", prop={'size': 15})
+plt.title("Proportion of Race Killed by Police, by State", fontsize = 25)
 plt.show()
-
